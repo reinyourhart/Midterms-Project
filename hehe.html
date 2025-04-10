@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details - Bulaklakin ni Minji</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="huhu.css">
+</head>
+<body>
+
+  <div class="container mt-4">
+    <h1 class="text-center">Mga Detalye ng Bulaklakin ni Minji</h1>
+    <div id="product-detail"></div>
+    <a href="haha.html" class="btn btn-secondary mt-4">Back to Products</a> <!-- Back button to products -->
+  </div>
+
+  <script>
+    // Product data
+    const products = [
+      { id: 1, name: "Elowynne", price: "₱4,499.00", description: "Princess Elowynne is a daydream in petal form, gentle, graceful, and full of love. Her bouquet of soft pink gerberas and lilies is like a whispered poem, wrapped in tulle and romance. Give her to someone with a tender heart, or keep her close when you need a little beauty in your world.", image: "pur.jpg" },
+      { id: 2, name: "Seraphelle", price: "₱4,099.00", description: "Princess Seraphelle is charm incarnate, playful, dazzling, and delightfully pretty. Her bouquet of sweet carnations and cheerful daisies is wrapped like a candygram from a royal crush. She’s perfect for birthdays, best friends, and secret admirers alike.", image: "a.jpg" },
+      { id: 3, name: "Lioraé", price: "₱1,999.00", description: "Princess Lioraé is the golden child of the flower kingdom, radiant, whimsical, and full of warmth. With a garden of red roses, yellow gerberas, and pastel petals, her bouquet feels like a picnic in the royal meadow. For celebrations, smiles, and sunny souls.", image: "b.jpg" },
+      { id: 4, name: "Solmira", price: "₱1,799.00", description: "Princess Solmira is the morning sun wrapped in silk, warm, steady, and gentle. Her bouquet of golden roses, sunflowers, and coral tulips feels like a fresh start kissed by royalty. She’s perfect for gratitude, good mornings, and golden-hearted queens.", image: "c.jpg" },
+      { id: 5, name: "Sylvielle", price: "₱2,199.00", description: "Princess Sylvielle is a quiet beauty from the heart of an enchanted grove. Her deep pink tulip buds, cradled by rich green leaves and tied with a red satin ribbon, are full of promise and poise. She’s soft-spoken yet striking—perfect for subtle romance, elegant gifting, or someone who blooms in their own time. Mysterious, fresh, and oh-so-coquette.", image: "d.jpg" },
+      { id: 6, name: "Noctelle", price: "₱1,499.00", description: "Princess Noctelle is the embodiment of quiet allure, a bouquet that speaks in poetry and soft glances. Pale pink tulips bloom like whispered secrets against a backdrop of velvety gray and onyx ribbon. She’s the kind of bouquet you'd send to someone who dances in the rain, writes letters on rainy evenings, or holds beauty in their silence. Soft, refined, and enchantingly coquette.", image: "e.jpg" },
+      { id: 7, name: "Lavendelle", price: "₱3,449.00", description: "Princess Lavendelle hails from the twilight gardens of a dreamy, forgotten kingdom. Her bouquet of delicate violet roses feels like a spell spoken in silk—soft, romantic, and captivating. Wrapped in moonlit ribbons and gentle lilac hues, she’s made for dreamers, romantics, and those who carry quiet magic in their hearts. She doesn’t just make a statement—she tells a story.", image: "g.jpg" },
+      { id: 8, name: "Evarelle", price: "₱5,299.00", description: "Princess Evarelle is grace draped in midnight, an exquisite arrangement of ivory lilies and soft white roses nestled in deep black silk and golden trim. She’s the quiet beauty of a winter masquerade, full of poise, depth, and regal mystery. Perfect for formal occasions, grand gestures, or anyone who embodies timeless beauty and silent strength.", image: "j.jpg" },
+      { id: 9, name: "Virelline", price: "₱3,299.00", description: "Princess Virelline walks the fine line between light and shadow, her bouquet of pristine white roses and baby’s breath framed by sheer black organza, like moonlight draped in silk. She's for the ones who are delicate, yet bold; soft, yet unforgettable. Whether for a love that lingers, a farewell wrapped in grace, or a moment of quiet beauty—Virelline is a bouquet that speaks in whispers and stays in hearts.", image: "k.jpg" },
+      { id: 10, name: "Caelina", price: "₱4,190.00", description: "Princess Caelina is the softest breeze in the royal garden, a tender bouquet of blush tulips, creamy white roses, and delicate lilac buds. Wrapped in layers of pink satin and lace, she’s the embodiment of love letters, spring mornings, and everything charming. Perfect for gifting to sweethearts, best friends, or anyone who deserves to feel adored, she brings the magic of a romantic daydream to life.", image: "r.jpg" }
+    ];
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = parseInt(urlParams.get('id'));
+
+    const product = products.find(p => p.id === productId);
+
+    if (product) {
+      const productDetail = `
+        <div class="row">
+          <div class="col-md-6">
+            <img src="${product.image}" alt="${product.name}" class="img-fluid rounded mb-3">
+          </div>
+          <div class="col-md-6">
+            <h2>${product.name}</h2>
+            <p><strong>Price:</strong> ${product.price}</p>
+            <p><strong>Full Description:</strong> ${product.description}</p>
+          </div>
+        </div>
+      `;
+      document.getElementById('product-detail').innerHTML = productDetail;
+    } else {
+      document.getElementById('product-detail').innerHTML = '<p>Product not found.</p>';
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

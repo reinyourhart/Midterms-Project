@@ -1,0 +1,245 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #faf3f7;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Global Styles */
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Typography */
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #ff6b81;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #ff82a1;
+  text-align: center;
+}
+
+p {
+  color: #555;
+  line-height: 1.6;
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+/* Navbar */
+nav {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  width: 100%;
+  border-bottom: 1px solid #ff6b81;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav .navbar-brand {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #ff6b81;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.navbar-nav .nav-link {
+  color: #ff6b81;
+  font-size: 1.1rem;
+  margin: 0 1.5rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff82a1;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #ffcccb;
+  color: white;
+  padding: 8rem 1rem 4rem;
+  text-align: center;
+  width: 100%;
+  margin-top: 80px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+/* Button */
+.btn {
+  background-color: #ff6b81;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  margin-top: 1.5rem;
+}
+
+.btn:hover {
+  background-color: #ff82a1;
+  transform: scale(1.05);
+}
+
+/* Product Table Fix */
+.table {
+  width: 100%;
+  table-layout: auto;
+}
+
+.table img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.table td, .table th {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Product Card */
+.product-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 2rem 0;
+  width: 80%;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 80%;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.product-card img:hover {
+  transform: scale(1.1);
+}
+
+.product-card h3 {
+  margin-top: 1rem;
+  color: #ff6b81;
+  font-size: 1.5rem;
+}
+
+.product-card p {
+  color: #777;
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+
+.product-card .price {
+  font-size: 1.3rem;
+  color: #ff6b81;
+  font-weight: bold;
+}
+
+.product-card .btn {
+  background-color: #ff6b81;
+  padding: 0.6rem 1.8rem;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-card .btn:hover {
+  background-color: #ff82a1;
+}
+
+/* Container for Products */
+.container {
+  padding: 3rem 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}
+
+/* Footer */
+footer {
+  background-color: #ffcccb;
+  text-align: center;
+  padding: 2rem 1rem;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+footer p {
+  color: #333;
+  font-size: 1.2rem;
+}
+
+footer a {
+  color: #ff6b81;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+footer a:hover {
+  color: #ff82a1;
+  text-decoration: underline;
+}
+
+/* Flower Image */
+.flower-image {
+  width: 80%;
+  border-radius: 50%;
+  margin-top: 2rem;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.flower-image:hover {
+  transform: scale(1.1);
+}
