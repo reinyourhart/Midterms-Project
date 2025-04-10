@@ -116,7 +116,7 @@ nav .navbar-brand {
   transform: scale(1.05);
 }
 
-/* Product Table Fix */
+/* Product Table */
 .table {
   width: 100%;
   table-layout: auto;
@@ -195,7 +195,7 @@ nav .navbar-brand {
   background-color: #ff82a1;
 }
 
-/* Container for Products */
+/* Container */
 .container {
   padding: 3rem 2rem;
   width: 100%;
@@ -242,4 +242,43 @@ footer a:hover {
 
 .flower-image:hover {
   transform: scale(1.1);
+}
+
+/* 🌐 Responsive Fixes for Mobile Devices */
+@media (max-width: 576px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+
+  footer {
+    padding: 1rem;
+  }
+
+  p {
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  h1, h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .table {
+    font-size: 0.9rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.6rem;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.95rem;
+    margin: 0 0.5rem;
+  }
 }
